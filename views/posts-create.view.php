@@ -6,7 +6,7 @@
 
 <form method="POST">
     <label> Title:
-        <input name="matgars"/>
+        <input name="title"/>
     </label>
     <label> category ID:
         <input name="category-id"/>
