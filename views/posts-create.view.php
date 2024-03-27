@@ -1,4 +1,5 @@
 <?php require "components/head.php" ?>
+
 <?php require "components/navbar.php" ?>
 
 <h1>Create a post </h1>
@@ -6,10 +7,18 @@
 
 <form method="POST">
     <label> Title:
-        <input name="title"/>
+        <input name="title" />
+
+        <?php if (isset($errors["title"])) { ?>
+                <p class="invalid-data"><?= $errors["title"] ?></p>
+        <?php } ?>
+
     </label>
     <label> category ID:
-        <input name="category-id"/>
+        <input name="category-id"/> 
+        <?php if (isset($errors["category-id"])) { ?>
+                <p class="invalid-data"><?= $errors["category-id"] ?> </p>
+        <?php } ?>
     </label>
     <button>save</button>
 <ul>
