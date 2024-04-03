@@ -42,3 +42,6 @@ label{
   color: red;
   font-size: 10px;
 }
+.delete-form {
+  display: inline-block;
+}

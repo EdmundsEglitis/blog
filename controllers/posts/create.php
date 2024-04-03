@@ -27,12 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     ];
     $db->execute($query, $params); 
-    header("Location: /");
     die();
 }
 }
 
-
-require "views/posts-create.view.php";
+var_dump($query);
+require "views/posts/create.view.php";
 
 
