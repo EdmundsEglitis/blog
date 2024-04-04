@@ -1,11 +1,12 @@
 <?php
+require "validator.php";
 require "Database.php";
 $config = require("config.php");
-
+$validators = new Validator();
 $db = new Database($config);
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $errors = [];
-    if(trim($_POST["title"]) == "") {
+    if(!Validator::string($_POST["title"], min: 1, max: 255)) {
         $errors["title"] = "da title is empty blud";
     }
 
@@ -31,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 }
 
-var_dump($query);
 require "views/posts/create.view.php";
 
 
