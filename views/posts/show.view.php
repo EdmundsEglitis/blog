@@ -9,7 +9,7 @@
     
 <h1><?= $post["title"] ?></h1>
 <h3>category id:<?= htmlspecialchars($post["category_id"]) ?></h3>
-
+<a href="/edit?id=<?= $post["id"] ?>">Edit</a>
 
 </body>
 </html>
